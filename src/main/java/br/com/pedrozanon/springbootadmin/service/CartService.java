@@ -5,8 +5,12 @@ import br.com.pedrozanon.springbootadmin.model.Product;
 import br.com.pedrozanon.springbootadmin.model.dto.RequestParams;
 import br.com.pedrozanon.springbootadmin.model.dto.Servicos;
 import br.com.pedrozanon.springbootadmin.model.enums.StatusCart;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class CartService {
+
+    @Autowired
+    private MailService mailService;
 
     public CartService() {
     }
@@ -60,6 +64,8 @@ public class CartService {
         cart.setTotalValueCart(total);
         cart.setStatus(StatusCart.FINALIZED);
 
+        //send email
+        mailService.sendEmail(cart.getCustomer().getEmail());
         return cart;
     }
 
