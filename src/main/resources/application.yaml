@@ -1,19 +1,19 @@
 server:
   port: 8081
-spring:
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username:
-    password:
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
-            required: true
-          ssl:
-            enable: false
-    test-connection: true
+#spring:
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username:
+#    password:
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+#            required: true
+#          ssl:
+#            enable: false
+#    test-connection: true
 
